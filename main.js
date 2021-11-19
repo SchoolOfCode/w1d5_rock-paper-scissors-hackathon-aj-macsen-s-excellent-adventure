@@ -29,8 +29,7 @@ function gameWin(playMove, compMove) {
     alert("computer wins!");
     score - 1;
   }
-  alert("Your score is, " + score);
-}
+  }
 
 let playerName = prompt("What's your name?");
 while (playerName.length > 10) {
@@ -53,7 +52,7 @@ while (true) {
     let compMove = randomNumber();
     compMove = moveSet[compMove];
     console.log("computer plays " + compMove);
-    alert(`${playerName} has played ${playMove}, computer played ${compMove}`);
+    alert(`${playerName} has played ${playMove}, computer has played ${compMove}`);
     console.log(`${playerName} plays ${playMove}`);
     {
       gameWin(playMove, compMove);
@@ -61,9 +60,9 @@ while (true) {
         result = totalScore++;
       }
       let keepPlaying = prompt(
-        `Do you want to keep playing? Yes or No, you have played ${totalScore} games and your score is ${score}!`
+        `Do you want to keep playing? y or n, you have played ${totalScore} games and your score is ${score}!`
       );
-      if (keepPlaying === "Yes") {
+      if (keepPlaying === "y") {
       } else {
         alert("Thank you for playing.");
         break;
